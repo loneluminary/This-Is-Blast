@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/CODE/UI%20Toolkit/SimpleLoadingScreen.uss?fileID=7433441132597879392&amp;guid=2d28f1cdded02b6459f1164e1740d6b0&amp;type=3#SimpleLoadingScreen"/>
+    <ui:VisualElement name="Root" enabled="true" class="root" style="flex-grow: 1; background-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="BackgroundTwo" class="background scaleDown scaleUp" style="transition-property: scale, opacity; transition-duration: 3s, 0.5s; transition-timing-function: ease-in-out, ease; transition-delay: 1s, 0s; color: rgb(0, 0, 0); background-color: rgb(255, 215, 0);"/>
+        <ui:VisualElement name="BackgroundOne" class="background scaleDown scaleUp" style="transition-property: scale, opacity; transition-duration: 3s, 0.5s; transition-timing-function: ease-in-out, ease; transition-delay: 1s, 0s; color: rgb(0, 0, 0); background-color: rgb(84, 69, 69); display: none;"/>
+        <ui:VisualElement style="flex-grow: 1; padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px; color: rgb(0, 0, 0);">
+            <ui:VisualElement name="TipsContainer" class="tipsContainer" style="padding-top: 18px; padding-right: 18px; padding-bottom: 18px; padding-left: 18px; display: flex; background-color: rgba(0, 0, 0, 0.16);">
+                <ui:Label tabindex="-1" text="Tip" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TipsTitleLabel" class="h1" style="color: rgb(255, 255, 255); -unity-font-style: bold;"/>
+                <ui:Label tabindex="-1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." parse-escape-sequences="true" display-tooltip-when-elided="true" name="TipLabel" class="paragraph heightZero heightFull" style="white-space: normal; overflow: hidden; flex-shrink: 0; flex-grow: 1; color: rgb(255, 255, 255); padding-top: 10px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; max-height: 20%; min-height: 20%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; opacity: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:VisualElement name="LoadingContent" style="flex-grow: 1; justify-content: flex-end; padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px; flex-direction: row; background-color: rgba(0, 0, 0, 0);">
+                <ui:VisualElement name="VisualElement" style="flex-grow: 1; justify-content: flex-end; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255); padding-right: 50px;">
+                    <ui:Label tabindex="-1" text="Loading... 100%" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadingLabel" class="h1 fadeIn fadeOut" style="padding-bottom: 8px; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(255, 255, 255); -unity-font-style: bold; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-self: auto; align-content: flex-start; align-items: stretch; -unity-text-align: upper-left; white-space: nowrap; margin-left: 15px; font-size: 36px;"/>
+                    <ui:VisualElement name="LoadingBarBG" class="loadingBar" style="max-height: 50px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; background-color: rgba(0, 0, 0, 0.39);">
+                        <ui:VisualElement name="LoadingBar" class="loadingBar" style="max-height: 50px; margin-top: 5px; margin-right: 6px; margin-bottom: 5px; margin-left: 6px; aspect-ratio: auto; max-width: 98.5%; justify-content: flex-start; display: flex; width: 121%;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="LoadingIconContainer" style="flex-grow: 1; max-width: 128px; justify-content: flex-end; align-items: center; display: flex; background-color: rgba(0, 0, 0, 0);">
+                    <ui:VisualElement name="SpinnerIcon" style="flex-grow: 1; max-width: 128px; max-height: 128px; background-image: url(&quot;project://database/Assets/ART/UI/Icons/Bomb.png?fileID=2800000&amp;guid=529f22278e111fd48afb010592848a41&amp;type=3#Bomb&quot;); min-width: 64px; min-height: 64px; align-self: flex-end; background-color: rgba(255, 255, 255, 0); -unity-background-image-tint-color: rgb(255, 255, 255); align-items: center; aspect-ratio: 1;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ContinueContent" enabled="true" focusable="false" style="flex-grow: 1; padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px; flex-direction: column; position: absolute; max-width: 100%; max-height: 100%; min-width: 100%; min-height: 100%; justify-content: flex-end; background-color: rgba(0, 0, 0, 0); display: none; visibility: visible; overflow: visible;">
+                <ui:Label tabindex="-1" text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContinueLabel" class="h1 fadeIn fadeOut" style="display: flex; -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(77, 77, 77);"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
